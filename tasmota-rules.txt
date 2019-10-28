@@ -1,0 +1,11 @@
+### This is a comment dont send it to tasmo.. 
+### Turn off and clear rule1, then set it to send MQTT topics if the voltage level is above "pressed" levels,
+### and publish OFF when its below. I watched the tasmo device page to see what analog went to when i pressed
+### the doorbell, and subtraced some to give me a margin of error. 145 is my high (pressed) reading, 9 is the low,
+### so 100 works well.  Consult Tasmota wiki for details on rules and using them.
+
+Rule1 0
+Rule1 ""
+Rule1 on analog#a0>100 do publish cmnd/tasmota/POWER ON endon on analog#a0<100 do publish cmnd/tasmota/POWER OFF endon
+Rule 5
+Rule1 1
