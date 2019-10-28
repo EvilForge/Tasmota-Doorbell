@@ -25,3 +25,9 @@ After some testing i did find spurious garbage on the hardware RX line, and swap
 Use at your own risk. No fuses installed, but a 1A fuse is probably a good idea (slow blow would be better to handle doorbell surges).
 
 Also this isnt line voltage - less than 20VAC - so youre fairly safe - but shorting the transformer will blow an internal, non replaceable link, so you'll end up buying a new transformer. Or grab a cheap 12VDC 1A plug in one to replace it, if you have a plug in the attic.
+
+Additional NOTE - since doorbell units are usually solenoid coils, you can get a huge backfeed when the circuit powers off (its how your igniition coil actually works, sortof). Since we are running on DC now, you can put a clamping diode on the coil terminals to catch that spike. I highly reccommend that. Putting it on the bell is better than at the circuit. In both places isnt a bad idea either. Heck if you need it loop the wires thru a torroid (not the AC power wires just the bell and button ones) and youll block even more RF noise.
+
+Also - put a small (33uF) and disc cap on the ESP8266 power pins to help filter there. 
+
+NOTE - if you ever revert to AC REMOVE THE DIODE on the bell first! Otherwise youll short the line. (sortof)
