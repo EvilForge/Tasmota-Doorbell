@@ -31,3 +31,5 @@ Additional NOTE - since doorbell units are usually solenoid coils, you can get a
 Also - put a small (33uF) and disc cap on the ESP8266 power pins to help filter there. 
 
 NOTE - if you ever revert to AC REMOVE THE DIODE on the bell first! Otherwise you'll short the line. (sort of)
+
+New Note - 1/15/20 - Tasmota has an issue with the DHT12 sensor. It goes NULL after a while. They have it fixed i think, with a recent dev branch update. I'm watching it. I have 2 devices that fail (mostly outside sensors too!) but indoor ones work? Could also be the source of the esp8266 Mini Di making a difference.. Cause i also have an outdoor sensor using DHT12 that works fine.
