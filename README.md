@@ -32,4 +32,8 @@ Also - put a small (33uF) and disc cap on the ESP8266 power pins to help filter 
 
 NOTE - if you ever revert to AC REMOVE THE DIODE on the bell first! Otherwise you'll short the line. (sort of)
 
+If you feel like it, feel free to [buy me a coffee!](https://www.buymeacoffee.com/rbef)
+
 New Note - 1/15/20 - Tasmota has an issue with the DHT12 sensor. It goes NULL after a while. They have it fixed i think, with a recent dev branch update. I'm watching it. I have 2 devices that fail (mostly outside sensors too!) but indoor ones work? Could also be the source of the esp8266 Mini Di making a difference.. Cause i also have an outdoor sensor using DHT12 that works fine.
+
+3/3/2020 - Nope. Those little blue DHT12 sensors must just be junk. Changing pins, adding pullups, updating to dev code, nothing seems to make them stable. An indoor sensor has now started to fail also. However, switching one of them back to the white (big case) DHT11 works? (for now)  I am going to order BME280 sensors. NOTE that you must make sure you get a BME not a BMP. The sensor should have a U in the next to last character on the case. If it has a K, its a BMP! Sellers dont know the difference so its up to you to watch for it and please, comment in the reviews if they get it wrong!
